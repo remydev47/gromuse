@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gromuse/commons/utils/kcolors.dart';
 
 class StoresSection extends StatelessWidget {
   const StoresSection({super.key});
@@ -57,7 +58,7 @@ class StoreCard extends StatelessWidget {
     return Container(
       width: 280,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Kolors.kOffWhite,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(

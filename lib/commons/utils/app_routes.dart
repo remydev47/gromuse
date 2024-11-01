@@ -5,7 +5,7 @@ import 'package:gromuse/src/categories/views/categories.dart';
 import 'package:gromuse/src/entrypoint/entrypoint.dart';
 import 'package:gromuse/src/onboarding/views/onboarding.dart';
 import 'package:gromuse/src/screens/cart.dart';
-import 'package:gromuse/src/screens/featuredstores.dart';
+import 'package:gromuse/src/screens/featuredstorescreen.dart';
 import 'package:gromuse/src/screens/products.dart';
 import 'package:gromuse/src/splashscreen/splashscreen.dart';
 
