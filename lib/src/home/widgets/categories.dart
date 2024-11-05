@@ -9,7 +9,7 @@ class CategoryItem {
 }
 
 class CategoriesSlider extends StatelessWidget {
-  CategoriesSlider({Key? key}) : super(key: key);
+  CategoriesSlider({super.key});
 
   final List<CategoryItem> categories = [
     CategoryItem(
@@ -57,9 +57,9 @@ class CategoryCard extends StatelessWidget {
   final CategoryItem category;
 
   const CategoryCard({
-    Key? key,
+    super.key,
     required this.category,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,7 @@ class CategoryCard extends StatelessWidget {
 
 // Optional: Shimmer loading effect for categories
 class CategoryShimmer extends StatelessWidget {
-  const CategoryShimmer({Key? key}) : super(key: key);
+  const CategoryShimmer({super.key});
 
   @override
   Widget build(BuildContext context) {

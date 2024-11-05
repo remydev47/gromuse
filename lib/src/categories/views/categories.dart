@@ -1,9 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gromuse/const/resource.dart';
 import 'package:gromuse/src/categories/widgets/categoriesappbar.dart';
+import 'package:gromuse/src/categories/widgets/categorycard.dart';
+
+class CategoryItem {
+  final String name;
+  final String iconPath;
+
+  CategoryItem({required this.name, required this.iconPath});
+}
 
 class Categories extends StatelessWidget {
-  const Categories({super.key});
+  Categories({super.key});
+  final List<CategoryItem> categories = [
+    CategoryItem(
+      name: 'Fruits',
+      iconPath: R.ASSETS_IMAGES_S1_PNG,
+    ),
+    CategoryItem(
+      name: 'Milk & egg',
+      iconPath: R.ASSETS_IMAGES_S2_PNG,
+    ),
+    CategoryItem(
+      name: 'Beverages',
+      iconPath: R.ASSETS_IMAGES_S3_PNG,
+    ),
+    CategoryItem(
+      name: 'Vaggies',
+      iconPath: R.ASSETS_IMAGES_S4_PNG,
+    ),
+    CategoryItem(
+      name: 'Laundry',
+      iconPath: R.ASSETS_IMAGES_S5_PNG,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +92,17 @@ class Categories extends StatelessWidget {
               ),
             ),
           ),
+          Expanded(
+            child: GridView.count(
+             crossAxisCount: 2,
+             padding: EdgeInsets.all(16),
+             mainAxisSpacing: 16,
+             crossAxisSpacing: 16,
+             children: [
+              CategoryCard(icon: Icons., title: title, subtitle: subtitle, color: color)
+             ],
+            ),
+          )
         ],
       ),
     );

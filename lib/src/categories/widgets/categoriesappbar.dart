@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gromuse/commons/utils/kcolors.dart';
+import 'package:gromuse/src/screens/featuredstorescreen.dart';
 
 class CustomShape extends CustomClipper<Path> {
   @override
@@ -25,6 +28,15 @@ class Categoriesappbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: IconButton(
+          onPressed: () {
+            context.go('/home');
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Kolors.kOffWhite,
+            size: 32,
+          )),
       toolbarHeight: 50,
       backgroundColor: Colors.transparent,
       elevation: 0.0,
@@ -77,7 +89,6 @@ class Categoriesappbar extends StatelessWidget implements PreferredSizeWidget {
                     ),
                   ),
                 ),
-               
               ],
             ),
           ),
