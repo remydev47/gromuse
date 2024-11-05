@@ -40,8 +40,7 @@ class Categories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Categoriesappbar(),
-      body: ListView(
-        scrollDirection: Axis.vertical,
+      body: Column(
         children: [
           //Proomtion Banner
           Padding(
@@ -94,13 +93,42 @@ class Categories extends StatelessWidget {
           ),
           Expanded(
             child: GridView.count(
-             crossAxisCount: 2,
-             padding: EdgeInsets.all(16),
-             mainAxisSpacing: 16,
-             crossAxisSpacing: 16,
-             children: [
-              CategoryCard(icon: Icons., title: title, subtitle: subtitle, color: color)
-             ],
+              crossAxisCount: 2,
+              padding: const EdgeInsets.all(16.0),
+              mainAxisSpacing: 16.0,
+              crossAxisSpacing: 16.0,
+              children: [
+                CategoryCard(
+                  imagePath: 'assets/images/ic3.png',
+                  title: 'Meats',
+                  subtitle: 'Frozen Meal',
+                ),
+                CategoryCard(
+                  imagePath: 'assets/images/ic1.png',
+                  title: 'Vegetables',
+                  subtitle: 'Markets',
+                ),
+                CategoryCard(
+                  imagePath: 'assets/images/ic4.png',
+                  title: 'Fruits',
+                  subtitle: 'Comical free',
+                ),
+                CategoryCard(
+                  imagePath: 'assets/images/ic2.png',
+                  title: 'Breads',
+                  subtitle: 'Burnt',
+                ),
+                 CategoryCard(
+                  imagePath: 'assets/images/ic5.png',
+                  title: 'Breads',
+                  subtitle: 'Burnt',
+                ),
+                 CategoryCard(
+                  imagePath: R.ASSETS_IMAGES_S3_PNG,
+                  title: 'Beverages',
+                  subtitle: 'Burnt',
+                ),
+              ],
             ),
           )
         ],

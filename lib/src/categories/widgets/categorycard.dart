@@ -1,24 +1,27 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:gromuse/commons/utils/kcolors.dart';
 
 class CategoryCard extends StatelessWidget {
-  final IconData icon;
+  final String imagePath;
   final String title;
   final String subtitle;
-  final Color color;
+
 
   const CategoryCard({
     super.key,
-    required this.icon,
+    required this.imagePath,
     required this.title,
     required this.subtitle,
-    required this.color,
+
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Kolors.kDarkTeal,
         borderRadius: BorderRadius.circular(12.0),
         boxShadow: [
           BoxShadow(
@@ -33,17 +36,11 @@ class CategoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: const EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              child: Icon(
-                icon,
-                color: color,
-                size: 32.0,
-              ),
+            Image.asset(
+              imagePath,
+              width: 60.0,
+              height: 60.0,
+              fit: BoxFit.contain,
             ),
             const SizedBox(height: 12.0),
             Text(
@@ -51,6 +48,7 @@ class CategoryCard extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,
+                color: Kolors.kOffWhite,
               ),
             ),
             const SizedBox(height: 4.0),
@@ -58,7 +56,7 @@ class CategoryCard extends StatelessWidget {
               subtitle,
               style: TextStyle(
                 fontSize: 12.0,
-                color: Colors.grey[600],
+                color: Kolors.kOffWhite,
               ),
             ),
           ],

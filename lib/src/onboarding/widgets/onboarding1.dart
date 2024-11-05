@@ -28,15 +28,15 @@ class OnboardingScreen1 extends StatelessWidget {
               height: 20.h,
             ),
             Image.asset(
-                width: 500.w,
-                height: 500.h,
+                width: 400.w,
+                height: 400.h,
                 fit: BoxFit.contain,
                 R.ASSETS_IMAGES_ONBOARDING1_PNG),
             SizedBox(
               height: 30.h,
             ),
             SizedBox(
-              height: 20.h,
+              height: 10.h,
             ),
             SizedBox(
               width: ScreenUtil().screenWidth - 100,

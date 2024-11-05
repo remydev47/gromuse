@@ -29,13 +29,13 @@ class WelcomeScreen extends StatelessWidget {
               height: 20.h,
             ),
             Image.asset(
-              width: 500.w,
-              height: 500.h,
+              width: 400.w,
+              height: 400.h,
               fit: BoxFit.contain,
               R.ASSETS_IMAGES_ONBOARDING3_PNG,
             ),
             SizedBox(
-              height: 30.h,
+              height: 20.h,
             ),
             Text(
               AppText.kWelcomeHeader,

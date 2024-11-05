@@ -29,7 +29,7 @@ final GoRouter _router = GoRouter(
     ),
     GoRoute(
       path: '/categories',
-      builder: (context, state) => const Categories(),
+      builder: (context, state) => Categories(),
     ),
     GoRoute(
       path: '/featuredstores',

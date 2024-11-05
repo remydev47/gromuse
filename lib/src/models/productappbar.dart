@@ -81,15 +81,17 @@ class _ProductappbarState extends State<Productappbar> {
                         'Daily Foods',
                         style: appStyle(24, Kolors.kOffWhite, FontWeight.bold),
                       ),
-                      const SizedBox(width: 60),
+                      const SizedBox(width: 30),
                       Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.circle, color: Kolors.kOffWhite),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            context.go('/cart');
+                          },
                           icon: Icon(
                             Icons.shopping_cart,
-                            size: 24,
+                            size: 20,
                             color: Kolors.kDark,
                           ),
                         ),
